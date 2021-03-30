@@ -32,7 +32,6 @@ public class TwitchBot extends PircBot {
         if (line.contains("PRIVMSG")) {
             TwitchMessage message = parseLine(line);
             if (message.getMessage().charAt(0) == '!') {
-//                String response = "@" + message.getUsername() + " " + handleMessage(message);
                 String response = handleMessage(message);
                 sendMessage(channel, response);
 
